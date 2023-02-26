@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+:root {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  color: #48555b;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+.main-title {
+  font-family: "Bebas Neue", cursive;
+  font-size: 58px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 5.70937px;
+  margin-bottom: -5px;
+  text-align: center;
+}
+.main-title__desc {
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 222px;
+  letter-spacing: 0.3px;
+}
+
+.text-h3 {
+  font-size: 12px;
+  letter-spacing: 1.09091px;
+  color: #48555b;
+  text-transform: uppercase;
+}
+
+.header {
+  min-height: 769px;
+  background-image: url(../img/header-bg.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.header__flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+.header__item .logo {
+  margin: 41px auto 310px;
+  width: 101.62px;
+  height: 23px;
+  cursor: pointer;
+}
+.header__item .scroll-title {
+  font-size: 11px;
+  letter-spacing: 3.7px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.navbar {
+  color: #f2f2f2;
+  border-bottom: 1px solid #48555b;
+}
+.navbar__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 451px;
+  padding: 24px 0 23px;
+}
+.navbar__logo {
+  width: 79.53px;
+  height: 18px;
+  cursor: pointer;
+}
+.navbar__flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+.navbar__menu-item:hover {
+  color: #00a4e5;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1030px) {
+  .navbar {
+    padding: 0 20px;
+  }
+  .navbar__grid {
+    gap: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 0 20px;
+  }
+  .main-title {
+    padding: 0 15px;
+  }
+  .scroll-title {
+    margin-bottom: 30px;
+  }
+  .navbar__logo {
+    margin: 0 auto;
+  }
+  .navbar__grid {
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    gap: 20px;
+  }
+  .navbar__flex {
+    justify-content: center;
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .main-title {
+    font-size: 50px;
+  }
+  .navbar__flex {
+    display: block;
+    text-align: center;
+  }
+  .navbar__menu-item {
+    padding-bottom: 10px;
+  }
+  .navbar__menu-item:last-child {
+    padding-bottom: 0;
+  }
+}
