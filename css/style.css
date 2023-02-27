@@ -44,6 +44,7 @@ img {
 
 .text-h3 {
   font-size: 21px;
+  font-weight: bold;
   text-transform: uppercase;
 }
 
@@ -78,7 +79,7 @@ img {
 }
 
 .logo {
-  margin: 41px auto 310px;
+  margin: 41px auto 305px;
   width: 101.62px;
   height: 23px;
   cursor: pointer;
@@ -118,10 +119,13 @@ img {
   cursor: pointer;
 }
 
+.about {
+  min-height: 519px;
+}
 .about__title {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   text-align: center;
-  padding: 52px 0 9px;
+  padding: 53px 0 9px;
 }
 .about__flex {
   display: flex;
@@ -131,6 +135,7 @@ img {
 .about__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "first second third";
   align-items: end;
   gap: 20px;
   margin-top: 30px;
@@ -141,23 +146,26 @@ img {
 }
 .about__grid-item:nth-child(1) {
   background-image: url(../img/picture-ourstory-1.jpeg);
+  grid-area: first;
 }
 .about__grid-item:nth-child(2) {
   background-image: url(../img/picture-ourstory-2.jpeg);
+  grid-area: second;
 }
 .about__grid-item:nth-child(3) {
   background-image: url(../img/picture-ourstory-3.jpeg);
+  grid-area: third;
 }
 
 .line {
   width: 50px;
   height: 2px;
   background-color: #00a4e5;
-  margin: 0 auto 54px;
+  margin: 0 auto 53px;
 }
 
 .our-story-title {
-  margin-bottom: 30px;
+  margin-bottom: 31px;
 }
 
 .out-story-span {
@@ -169,6 +177,116 @@ img {
   color: #ffffff;
   line-height: 30px;
   padding: 15px;
+}
+
+.capabilities__flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.capabilities__title {
+  width: 198px;
+  margin-right: 155px;
+  margin-bottom: 10px;
+}
+.capabilities__line {
+  width: 50px;
+  height: 2px;
+  background-color: #00a4e5;
+}
+.capabilities__desc {
+  font-style: Regular;
+  font-size: 11px;
+  line-height: 19px;
+  letter-spacing: 0.2px;
+  margin-right: 31.6px;
+}
+
+.btn {
+  width: 150px;
+  height: 40px;
+  background-color: #00a4e5;
+  color: #fff;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+}
+
+.services {
+  padding: 76px 0 115px;
+}
+.services__flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 28px;
+}
+.services__flex-card {
+  border: 1px solid #dfdfdf;
+  padding: 37px 23px;
+}
+.services__picture {
+  margin-bottom: 25px;
+}
+.services__title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: left;
+  letter-spacing: 0.43px;
+  margin-bottom: 13px;
+  text-transform: uppercase;
+}
+
+.get-in-touch {
+  min-height: 498px;
+  background-image: url(../img/get-in-touch-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.get-in-touch__flex-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.get-in-touch__title {
+  max-width: 350px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: Center;
+  letter-spacing: 0.15px;
+  margin: 121px 0 34px;
+}
+
+.newsletter {
+  background-color: #171819;
+}
+.newsletter__inner {
+  max-width: 683px;
+  margin: 0 auto;
+}
+.newsletter__flex {
+  min-height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.newsletter__title {
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: 1.3px;
+  color: #ffffff;
+}
+
+.input {
+  width: 248px;
+  height: 39px;
+  background-color: #ffffff;
+  padding-left: 16px;
+  margin-right: -5px;
+  font-size: 14px;
+  letter-spacing: 0.07px;
 }
 
 @media screen and (max-width: 1030px) {
@@ -184,6 +302,16 @@ img {
     flex-wrap: wrap;
     gap: 20px;
     text-align: center;
+    margin-bottom: 70px;
+  }
+  .capabilities {
+    padding: 0 20px;
+  }
+  .capabilities__title {
+    margin-right: 100px;
+  }
+  .services {
+    padding: 60px 20px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -208,10 +336,25 @@ img {
     justify-content: center;
     gap: 20px;
   }
+  .capabilities__flex {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .capabilities__flex-item {
+    margin-bottom: 20px;
+  }
+  .capabilities__title {
+    margin-right: 0;
+  }
+  .services__flex {
+    flex-wrap: wrap;
+  }
 }
 @media screen and (max-width: 576px) {
   .about__grid {
-    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "first second" "third third";
   }
 }
 @media screen and (max-width: 380px) {
@@ -227,5 +370,12 @@ img {
   }
   .navbar__menu-item:last-child {
     padding-bottom: 0;
+  }
+  .about__grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: "first" "second" "third";
+  }
+  .get-in-touch {
+    padding: 0 20px;
   }
 }
