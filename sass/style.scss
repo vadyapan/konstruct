@@ -306,12 +306,123 @@ img {
 
 .input {
   width: 248px;
-  height: 39px;
+  height: 40px;
   background-color: #ffffff;
   padding-left: 16px;
   margin-right: -5px;
   font-size: 14px;
   letter-spacing: 0.07px;
+}
+
+// Footer
+.footer {
+  min-height: 240px;
+  background-color: #141a20;
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+    padding: 42px 0 23px;
+  }
+
+  &__grid-item {
+    margin-right: 70px;
+    &:nth-child(3) {
+      margin-right: 70px;
+    }
+  }
+  &__grid-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+  }
+
+  &__logo {
+    margin: 0;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    font-size: 11px;
+    line-height: 19px;
+    color: $white-color;
+    letter-spacing: 0.81px;
+  }
+
+  &__desc {
+    width: 250px;
+  }
+
+  .links__list {
+    &:nth-child(1) {
+      margin-right: 52px;
+    }
+    &:nth-child(2) {
+      margin-right: 37px;
+    }
+    &:nth-child(3) {
+      margin-right: -11px;
+    }
+  }
+  .links__list-item {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  &__icon {
+  }
+
+  &__copy {
+    min-height: 60px;
+    background-color: $black-color;
+    padding: 22px 0;
+    text-align: center;
+    letter-spacing: 0.6px;
+  }
+  &__text {
+    font-size: 11px;
+    letter-spacing: 0.85;
+    color: $white-color;
+  }
+}
+
+.section-name {
+  font-size: 11px;
+  letter-spacing: 0.85px;
+  color: $white-color;
+  text-transform: uppercase;
+  &__company {
+    margin-bottom: 19px;
+  }
+  &__links {
+    margin-bottom: 12px;
+  }
+  &__contact-us {
+    margin-bottom: 14px;
+  }
+}
+
+.links {
+  &__list {
+  }
+}
+.list {
+  &__list-item {
+  }
+}
+.text-contact {
+}
+.address {
+  line-height: 16px;
+  margin-bottom: 14px;
+}
+.phone {
+  color: $white-color;
+}
+.e-mail {
+  color: $white-color;
+  margin-bottom: 13px;
 }
 
 @media screen and (max-width: 1030px) {
@@ -378,6 +489,12 @@ img {
     }
   }
   .services__flex {
+    flex-wrap: wrap;
+  }
+  .newsletter {
+    padding: 0 20px;
+  }
+  .newsletter__flex {
     flex-wrap: wrap;
   }
 }
