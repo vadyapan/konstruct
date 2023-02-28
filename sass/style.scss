@@ -101,6 +101,14 @@ img {
   letter-spacing: 3.7px;
   color: $white-color;
   text-transform: uppercase;
+  transition: all 2s ease;
+  animation: scroll 1s linear infinite;
+
+  @keyframes scroll {
+    from {
+      transform: translateY(-20px);
+    }
+  }
 }
 
 // Navbar
@@ -337,6 +345,12 @@ img {
     justify-content: space-between;
   }
 
+  &__flex {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+  }
   &__logo {
     margin: 0;
     margin-bottom: 15px;
@@ -344,13 +358,21 @@ img {
 
   &__text {
     font-size: 11px;
+    font-weight: 200;
     line-height: 19px;
+    letter-spacing: 1px;
     color: $white-color;
-    letter-spacing: 0.81px;
   }
 
   &__desc {
     width: 250px;
+  }
+
+  &__copy {
+    min-height: 60px;
+    background-color: $black-color;
+    padding: 18px 0;
+    text-align: center;
   }
 
   .links__list {
@@ -365,30 +387,18 @@ img {
     }
   }
   .links__list-item {
+    font-size: 11px;
+    line-height: 19px;
+    color: $white-color;
     letter-spacing: 1px;
     text-transform: uppercase;
     margin-bottom: 6px;
-  }
-
-  &__icon {
-  }
-
-  &__copy {
-    min-height: 60px;
-    background-color: $black-color;
-    padding: 22px 0;
-    text-align: center;
-    letter-spacing: 0.6px;
-  }
-  &__text {
-    font-size: 11px;
-    letter-spacing: 0.85;
-    color: $white-color;
   }
 }
 
 .section-name {
   font-size: 11px;
+  font-weight: 200;
   letter-spacing: 0.85px;
   color: $white-color;
   text-transform: uppercase;
@@ -403,26 +413,21 @@ img {
   }
 }
 
-.links {
-  &__list {
-  }
-}
-.list {
-  &__list-item {
-  }
-}
-.text-contact {
-}
 .address {
   line-height: 16px;
   margin-bottom: 14px;
 }
 .phone {
-  color: $white-color;
+  margin-bottom: 13px;
+  &__link {
+    color: $white-color;
+  }
 }
 .e-mail {
-  color: $white-color;
   margin-bottom: 13px;
+  &__link {
+    color: $white-color;
+  }
 }
 
 @media screen and (max-width: 1030px) {
@@ -448,6 +453,20 @@ img {
   }
   .services {
     padding: 60px 20px;
+  }
+  .footer {
+    padding: 0 20px;
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+    &__flex {
+      justify-content: flex-start;
+      gap: 20px;
+    }
+    .links__list:nth-child(3) {
+      margin: 0;
+    }
   }
 }
 
@@ -497,6 +516,22 @@ img {
   .newsletter__flex {
     flex-wrap: wrap;
   }
+  .footer {
+    &__grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+
+@media screen and (max-width: 653px) {
+  .newsletter__flex {
+    padding: 15px;
+  }
+  .input {
+    width: 220px;
+    height: 39px;
+    margin: 15px -4px;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -506,6 +541,9 @@ img {
     grid-template-areas:
       "first second"
       "third third";
+  }
+  .input {
+    margin: 15px 0;
   }
 }
 
@@ -534,5 +572,39 @@ img {
   }
   .get-in-touch {
     padding: 0 20px;
+  }
+  .newsletter__flex {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 310px) {
+  .footer {
+    text-align: center;
+    &__grid-links {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .links__list {
+      &:nth-child(1) {
+        margin: 0;
+      }
+      &:nth-child(2) {
+        margin: 0;
+      }
+    }
+    &__logo {
+      margin: 0 auto 15px;
+    }
+    &__flex {
+      justify-content: center;
+    }
+    &__copy {
+      padding: 20px;
+    }
+  }
+  .input {
+    width: 150px;
+    padding-left: 7px;
   }
 }
