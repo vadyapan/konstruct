@@ -91,11 +91,14 @@ img {
   color: #ffffff;
   text-transform: uppercase;
   transition: all 2s ease;
-  animation: scroll 1s linear infinite;
+  animation: move 1s alternate infinite;
 }
-@keyframes scroll {
+@keyframes move {
   from {
-    transform: translateY(-20px);
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-10px);
   }
 }
 
