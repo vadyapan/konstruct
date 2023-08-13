@@ -32,7 +32,7 @@ img {
 .main-title__desc {
   font-size: 16px;
   color: #ffffff;
-  margin-bottom: 215px;
+  margin-bottom: 150px;
   letter-spacing: 0.3px;
 }
 
@@ -66,7 +66,7 @@ img {
 }
 
 .header {
-  min-height: 769px;
+  height: 100vh;
   background-image: url(../img/header-bg.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -405,7 +405,7 @@ img {
 }
 
 @media screen and (max-width: 1030px) {
-  .header{
+  .header {
     background-position: center center;
   }
   .navbar {
